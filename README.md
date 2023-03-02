@@ -1,3 +1,3 @@
 # simuladorCoderhouseJS
 
-PreEntrega1+ZavalaHernandez
+PreEntrega2+ZavalaHernandez
