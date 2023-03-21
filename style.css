@@ -2,7 +2,7 @@
   --wh: #ffffff;
   --bk: #000000;
   --c1: #394f64;
-  --c2: #cabea5;
+  --c2: #e2dcce;
   --tr: rgba(255, 255, 255, 0.082);
 }
 
@@ -30,6 +30,12 @@ h1 {
   color: var(--wh);
   background: var(--c1);
   border-radius: 0.5rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  color: var(--wh);
+  font-weight: lighter;
 }
 
 p {

@@ -45,8 +45,17 @@ function filtrarArray(objeto, array, periodo) {
 }
 
 //Función salida en alert
-function salidaAlert(objeto) {
-  alert(`${objeto.nombre}, tu gasto anual en servicios es de: $${objeto.gastoAnual}.`);
+function mensajeSalida(objeto) {
+  const mensaje = document.createElement('h3');
+  mensaje.innerText = `${objeto.nombre}, tu gasto anual en servicios es de: $${objeto.gastoAnual}.`
+  const divMensaje = document.getElementById('mensaje');
+  divMensaje.append(mensaje);
+
+  setTimeout(() => {
+    divMensaje.removeChild(mensaje);
+  }, 5000);
+
+  // alert(`${objeto.nombre}, tu gasto anual en servicios es de: $${objeto.gastoAnual}.`);
 }
 
 //////////////////////////// LÓGICA ////////////////////////////
@@ -72,7 +81,7 @@ function calcularGastos() {
       filtrarArray(user, gastoSuma, 12);
 
       // Salida en alert
-      salidaAlert(user);
+      mensajeSalida(user);
 
     } else if (modalidad === 'semanal') {
       // Definir Array para registro de entradas semanales.
@@ -81,7 +90,7 @@ function calcularGastos() {
       filtrarArray(user, gastoSuma, 52);
 
       // Salida alert
-      salidaAlert(user);
+      mensajeSalida(user);
 
     } else {
       alert('Ingresa un valor válido');
