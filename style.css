@@ -1,9 +1,10 @@
 :root {
   --wh: #ffffff;
   --bk: #000000;
-  --c1: #394f64;
-  --c2: #e2dcce;
-  --tr: rgba(255, 255, 255, 0.082);
+  --c1: #586c6d;
+  --c2: #a5b8b8;
+  --c3: #394a4b;
+  --tr: rgba(0, 0, 0, 0.068);
 }
 
 * {
@@ -26,7 +27,7 @@ h1 {
   font-size: 1.4rem;
   font-weight: normal;
   margin-bottom: 12px;
-  padding: 12px 4px 12px 4px;
+  padding: 12px 8px 12px 8px;
   color: var(--wh);
   background: var(--c1);
   border-radius: 0.5rem;
@@ -43,12 +44,21 @@ p {
   color: var(--wh);
 }
 
-.nombre {
-  padding: 0.4rem;
-  background: #ffd4e41a;
+label {
+  margin-right: 10px;
+  font-size: 1rem;
+  color: #fff;
 }
 
-.content {
+input {
+  border: none;
+  padding: 4px 0;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono';
+  text-align: center;
+}
+
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,24 +67,38 @@ p {
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
   background-color: var(--tr);
   box-shadow: 0px 10px 15px #00000042;
 }
 
+.footer--name {
+  padding: 0.4rem;
+  background: #ffd4e41a;
+}
+
+.input--name {
+  padding: 1rem 0 0 0;
+}
+
 #btn {
   border: none;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin: 2rem 0 0 0;
+  border-radius: 4px;
+  padding: .5rem;
+  margin-top: 1rem;
   background: var(--wh);
-  transition: 0.1s ease-out;
+  transition: 0.1s ease-in-out;
   font-family: 'JetBrains Mono', monospace;
 }
 
 #btn:hover {
+  cursor: pointer;
   transform: scale(1.05);
   box-shadow: 0px 3px 4px #0000001f;
+}
+
+#dolarHoy {
+  margin-top: 2rem;
 }
 
 select {

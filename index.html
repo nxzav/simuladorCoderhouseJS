@@ -7,25 +7,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> <!-- Librería notificaciones -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Librería de alertas -->
   <title>Simulador Coderhouse</title>
 </head>
 <body>
-  <div class="content">
+  <div class="card">
     <div>
       <h1>SIMULADOR DE GASTO ANUAL EN SERVICIOS FIJOS</h1>
     </div>
     <form>
-      <label for="mod"><p>Seleccionar modalidad</p></label>
+      <label style="color: #ffffff;" for="mod">Seleccionar modalidad</label>
       <select name="mod" id="mod">
+        <option value="none">Elegir Modo</option>
         <option value="mensual">Mensual</option>
         <option value="semanal">Semanal</option>
       </select>
     </form>
+    <div class="input--name">
+      <label for="nombre">Nombre</label><input id="nombre" type="text" placeholder="Escribe tu nombre">
+    </div>
     <button id="btn">Comenzar</button>
-    <p class="nombre">Noé Zavala Hernández 2023</p>
+    <p class="footer--name">Noé Zavala Hernández 2023</p>
     <div id="mensaje"></div>
+    <div>
+      <p id="dolarHoy"></p>
+    </div>
   </div>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="app.js"></script>
 </body>
 </html>
